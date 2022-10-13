@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-heading: 'Palanquin', sans-serif; 
+  --ff-texting: 'Staatliches', sans-serif;
+
+  --background-color: hsl(233, 100%, 97%);
+  --header-bg-color: hsl(218, 17%, 62%);
+  --strawberry-ice-cream-color: hsl(275, 18%, 79%);
+  --bg-cards-h2: #FEEAFA;
+
+  --fc-primary: #FFFFFF;
+  --fc-secundary: #23053A;
+  --fc-h2: #4A4E69;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+header {
+  background-color: var(--header-bg-color);
+  text-align: center;
+  height: 30rem;
+
+}
+
+header img {
+  margin: 3.2rem auto;
+
+  animation: downtop 1s;
+
+}
+
+header h1 {
+  background-color: var(--strawberry-ice-cream-color);
+  color: var(--fc-primary);
+
+
+  font-family: var(--ff-texting);
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+
+  margin-top: -1rem;
+
+  animation: leftright 900ms;
+
+}
+
+.wrapper {
+  width: 32rem;
+  margin: 1.4rem auto 6rem;
+}
+
+.wrapper p {
+  color: var(--fc-secundary);
+  font-family: var(--ff-heading);
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+
+
+  width: 30rem;
+  margin-bottom: 6.3rem;
+}
+
+main .grid {
+  display: grid;
+  gap: 3.2rem;
+}
+
+main .card {
+  position: relative;
+
+  animation: downtop 900ms ease;
+
+}
+
+main .card h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  z-index: 1;
+  font-size: 2rem;
+  padding: 0.5rem 2.5rem;
+  border-radius: 2rem;
+
+  background-color: var(--bg-cards-h2);
+  color: var(--fc-h2);
+  font-family: var(--ff-texting);
+
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+
+  animation: topdown 1.5s ease 100ms;
+
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leftright {
+  0% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
